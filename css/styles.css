@@ -1,19 +1,24 @@
+/* Font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
 :root {
+  /* Variables */
   --main-color: #0092f4;
   --bg_main_color: #1b2b3a;
   --html-height: 100vh;
 }
 
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
 }
 
+/* Background of scrollbar */
 ::-webkit-scrollbar-track {
   background: #087f71;
 }
 
+/* Scrollbar's thumb settings */
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(#1485e6, #00c2f0, #2ceeb8);
   border-radius: 6px;
@@ -25,12 +30,14 @@ html {
 }
 
 * {
+  /* Set font */
   font-family: 'Kdam Thmor Pro', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Center everything */
 body {
   display: flex;
   justify-content: center;

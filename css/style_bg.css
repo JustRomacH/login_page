@@ -1,8 +1,10 @@
 :root {
+    /* Variables */
     --round-color: #005689;
     --round-shadow-color: #00568944;
     --html-height: 100vh;
 }
+
 
 html {
     height: var(--html-height);
@@ -45,6 +47,7 @@ body {
     animation-duration: calc(125s / var(--i));
 }
 
+/* Animation */
 @keyframes animate {
     0% {
         transform: translateY(var(--html-height)) scale(0);

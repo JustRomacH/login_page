@@ -24,7 +24,7 @@ function random_speed() {
             first = false;
         } else {
             var randint = getRandomInt(10, 27);
-            //? Проверка совпадения скоростей соседних span'ов
+            // If spans have the same speed
             if (randint == rounds[span - 1].style.getPropertyValue("--i")) {
                 rounds[span].style.setProperty("--i", getRandomInt(10, 27));
             }
@@ -43,6 +43,7 @@ function create_span() {
     var round_size = Number(window.getComputedStyle(round).getPropertyValue("width").slice(0,-2));
     var round_margin = 2*Number(window.getComputedStyle(round).getPropertyValue("margin").slice(4,-2));
     var total_size = round_size + round_margin;
+    
     for (var i = 0; i < Math.round(ScreenWidth/total_size); i++) {
         var clone = round.cloneNode(true);
         document.getElementsByClassName("bubbles")[0].appendChild(clone);
