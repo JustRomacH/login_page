@@ -1,7 +1,7 @@
 import { colors } from "./colors.js";
 
 
-//? Рандомный цвет span'а
+// Sets random color to each span
 function random_color() {
     var rounds = document.getElementsByClassName("round_span");
     for (var span = 0; span < rounds.length; span++) {
@@ -13,12 +13,12 @@ function random_color() {
 }
 
 
-//* Рандомная скорость span'а
+// Sets random speed to each span
 function random_speed() {
     var rounds = document.getElementsByTagName("span");
     var first = true;
     for (var span = 0; span < rounds.length; span++) {
-        //! Если первый шар
+        // If first span
         if (first == true) {
             rounds[span].style.setProperty("--i", getRandomInt(10, 27));
             first = false;
@@ -36,7 +36,7 @@ function random_speed() {
 }
 
 
-//? Создание нужного количества span'ов
+// Creating the required number of spans
 function create_span() {
     var round = document.getElementsByTagName("span")[0];
     const ScreenWidth = window.outerWidth;
@@ -51,14 +51,14 @@ function create_span() {
 }
 
 
-//* Рандомный int
+// Returns random int
 function getRandomInt(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
 
 
-//! Старт после загрузки 
+// Start after DOM load
 $(function() {
     create_span();
     random_color();
