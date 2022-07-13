@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+:root {
+  --main-color: #0092f4;
+  --bg_main_color: #1b2b3a;
+  --html-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #087f71;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#1485e6, #00c2f0, #2ceeb8);
+  border-radius: 6px;
+  border: 0.175rem #528580 solid;
+}
+
+html {
+  height: var(--html-height);
+}
+
+* {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  gap: 30px;
+  background: var(--bg_main_color);
+}
+
+.inputs {
+  position: absolute;
+}
+
+.inputBox {
+  position: relative;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: var(--bg_main_color);
+  border-width: 2px;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: .5s;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: var(--main-color);
+  transform: translateX(10px) translateY(-7px);
+  font-size: .65em;
+  padding: 0 10px;
+  background-color: var(--bg_main_color);
+  border-left: 2px solid var(--main-color);
+  border-right: 2px solid var(--main-color);
+  letter-spacing: .2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid var(--main-color);
+  box-shadow: 0px 0px 20px 0px var(--main-color);
+}
+
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span {
+  background: var(--main-color);
+  color: var(--bg_main_color);
+  border-radius: 3px;
+}

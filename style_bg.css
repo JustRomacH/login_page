@@ -1,0 +1,55 @@
+:root {
+    --round-color: #005689;
+    --round-shadow-color: #00568944;
+    --html-height: 100vh;
+}
+
+html {
+    height: var(--html-height);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: var(--html-height);
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--round-color);
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px var(--round-shadow-color),
+    0 0 50px var(--round-color),
+    0 0 100px var(--round-color);
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(var(--html-height)) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
