@@ -2,6 +2,8 @@
 
 ### I used Python, or rather its libraries, to scrap such a large list of colors.
 
+![Example](https://github.com/JustRomacH/login_page/raw/master/images/Screenshot_1.png)
+
 ### Libraries used in project:
 
 - autopep8
